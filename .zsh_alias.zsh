@@ -85,3 +85,13 @@ alias c.='code .'
 alias hi='me open'
 alias ff='find . -name'
 alias tl='tree -L 1'
+
+function show_bundlers() {
+  for ver in $(rbenv versions --bare); do
+    echo "---- Ruby $ver ----"
+    RBENV_VERSION=$ver ruby -v
+    RBENV_VERSION=$ver gem list bundler
+    RBENV_VERSION=$ver gem which bundler
+    echo
+  done
+}
