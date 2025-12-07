@@ -18,7 +18,6 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 compctl -K _pyenv pyenv
 
-
 # -------------------------------
 # Dart (pub)
 # -------------------------------
@@ -32,6 +31,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Not needed for zsh
 
 # -------------------------------
+# Go (asdf)
+# -------------------------------
+# asdf is used for Go version management
+. /usr/local/opt/asdf/libexec/asdf.sh
+
+# -------------------------------
 # Java (OpenJDK installed by Homebrew)
 # -------------------------------
 # export JAVA_HOME=$(/usr/libexec/java_home)
@@ -41,11 +46,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export JAVA_HOME="/usr/local/opt/openjdk@17"
 export PATH="$JAVA_HOME/bin:$PATH"
 
+export PATH=$PATH:~/Library/Android/sdk/platform-tools
 
 # -------------------------------
 # Homebrew Tools
 # -------------------------------
-export PATH="/usr/local/opt/openssl@1.1/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:/usr/local/opt/mysql@8.0/bin:$PATH"
 
 # -------------------------------
 # Zsh completions
@@ -72,6 +78,12 @@ PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
 # Custom Scripts
 # -------------------------------
 export PATH="$PATH:~/Personal/bin"
+
+# -------------------------------
+# Android Studio SDK
+# -------------------------------
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
