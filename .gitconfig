@@ -11,7 +11,7 @@
     cmd = code --wait \"$MERGED\"
 [user]
 	name = Kyohei Sakai
-	email = ladnack@gmail.com
+	email = kyoheisakai.me@gmail.com
 [color]
 	ui = auto
 [alias]
