@@ -66,8 +66,8 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
 # Custom zsh completions
 fpath=(~/.zsh/completion $fpath)
 
-# Docker CLI completions
-fpath=($HOME/.docker/completions $fpath)
+# Docker CLI completion (Docker Desktop) ----
+fpath=(/Applications/Docker.app/Contents/Resources/etc $fpath)
 
 # Dart CLI completions
 [[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
