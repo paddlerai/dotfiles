@@ -10,6 +10,14 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # ============================================
+# API Keys (loaded from .zshrc.local)
+# ============================================
+# Load local configuration file if it exists
+# This file should contain sensitive information like API keys
+# and should NOT be committed to git
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+# ============================================
 # PATH Configuration
 # ============================================
 # Custom script directories
